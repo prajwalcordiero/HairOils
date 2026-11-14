@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keshya — Ayurvedic Herbal Hair Oils</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="drop">
+      <svg viewBox="0 0 46 62"><defs><clipPath id="dropClip"><path d="M23 2C23 2 3 26 3 40a20 20 0 0 0 40 0C43 26 23 2 23 2z"/></clipPath></defs>
+        <path d="M23 2C23 2 3 26 3 40a20 20 0 0 0 40 0C43 26 23 2 23 2z" fill="none" stroke="#C8923A" stroke-width="2"/>
+        <g clip-path="url(#dropClip)"><rect class="fill" x="0" y="0" width="46" height="62" fill="#C8923A"/></g></svg>
+    </div>
+    <div class="loader-word">KESHYA</div>
+  </div>
+</div>
+<div class="cursor" id="cursor"></div>
+
+<div class="announce">✦ Free shipping on orders above <b>₹999</b> &nbsp;·&nbsp; Use code <b>ROOTS15</b> for 15% off your first ritual ✦</div>
+
+<nav id="nav">
+  <div class="container nav-row">
+    <a href="#" class="logo">
+      <svg viewBox="0 0 22 28"><path d="M11 1S2 12 2 18a9 9 0 0 0 18 0C20 12 11 1 11 1z" fill="#C8923A"/><path d="M11 8c-2 4-3 7-3 10" stroke="#1E3A2B" stroke-width="1.4" fill="none"/></svg>
+      KESHYA
+    </a>
+    <div class="nav-links">
+      <a href="#shop">Shop</a><a href="#ingredients">Ingredients</a><a href="#ritual">The Ritual</a><a href="#quiz">Hair Quiz</a><a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Search" id="searchBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button class="icon-btn" aria-label="Cart" id="cartBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 7h14l-1.2 12.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" id="cartCount">0</span></button>
+      <button class="icon-btn burger" aria-label="Menu" id="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16M4 16h16"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <button class="close" id="mclose" aria-label="Close menu" data-icon="x"></button>
+  <a href="#shop">Shop</a><a href="#ingredients">Ingredients</a><a href="#ritual">The Ritual</a><a href="#quiz">Hair Quiz</a><a href="#faq">FAQ</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow fade-in">Ayurvedic · Cold-Pressed · Slow-Brewed</div>
+      <h1 id="heroTitle">Rooted in nature, <em>crafted</em> for your crown.</h1>
+      <p class="lead fade-in d1">Herbal hair oils slow-cooked for 7 days over a low flame, with 21 hand-picked herbs, the way our grandmothers made them, refined for the way you live now.</p>
+      <div class="hero-ctas fade-in d2">
+        <a href="#shop" class="btn btn-primary magnetic">Shop the oils <span class="arrow">→</span></a>
+        <a href="#quiz" class="btn btn-ghost magnetic">Take the hair quiz</a>
+      </div>
+      <div class="hero-meta fade-in d3">
+        <div><strong>21</strong>Potent herbs</div>
+        <div><strong>0%</strong>Mineral oil & parabens</div>
+        <div><strong>4.8★</strong>12k+ reviews</div>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual">
+      <div class="ring r2"></div>
+      <div class="ring r1"><span class="dot"></span></div>
+      <div class="hero-bottle" id="heroBottle"></div>
+      <div class="leaf" data-depth="30" style="top:8%;left:12%"><svg width="70" height="70" viewBox="0 0 60 60"><path d="M10 50C10 25 30 8 52 8 52 32 35 50 10 50z" fill="#5E7A4C"/><path d="M10 50 44 16" stroke="#2B4D3A" stroke-width="1.5"/></svg></div>
+      <div class="leaf" data-depth="-20" style="bottom:12%;left:4%"><svg width="54" height="54" viewBox="0 0 60 60" style="animation-delay:-2s"><path d="M10 50C10 25 30 8 52 8 52 32 35 50 10 50z" fill="#2B4D3A"/><path d="M10 50 44 16" stroke="#5E7A4C" stroke-width="1.5"/></svg></div>
+      <div class="leaf" data-depth="45" style="top:16%;right:6%"><svg width="48" height="48" viewBox="0 0 48 48" style="animation-delay:-1s"><circle cx="24" cy="24" r="10" fill="#B5562F"/><circle cx="24" cy="24" r="4" fill="#E2B566"/><g fill="#C8513A" opacity=".85"><ellipse cx="24" cy="8" rx="6" ry="9"/><ellipse cx="24" cy="40" rx="6" ry="9"/><ellipse cx="8" cy="24" rx="9" ry="6"/><ellipse cx="40" cy="24" rx="9" ry="6"/></g><circle cx="24" cy="24" r="4" fill="#E2B566"/></svg></div>
+      <div class="leaf" data-depth="-35" style="bottom:20%;right:10%"><svg width="40" height="40" viewBox="0 0 40 40" style="animation-delay:-3s"><circle cx="20" cy="20" r="14" fill="#9DB35A"/><path d="M20 6v28M8 14c6 4 18 4 24 0M8 26c6-4 18-4 24 0" stroke="#5E7A4C" stroke-width="1.2" fill="none"/></svg></div>
+      <div class="badge-float" style="top:22%;left:-4%"><span class="ic" data-icon="leaf"></span><div><b>100% Herbal</b>Certified Ayurvedic</div></div>
+      <div class="badge-float" style="bottom:16%;right:-2%;animation-delay:-3s"><span class="ic" data-icon="flame"></span><div><b>7-Day Brew</b>Kshirpaka method</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll<span></span></div>
+</header>
+
+<!-- Marquee -->
+<div class="marquee"><div class="marquee-track" id="marquee"></div></div>
+
+<!-- INGREDIENTS -->
+<section class="ingredients" id="ingredients">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The Herb Garden</div>
+      <h2>Every drop, a <em>story</em> from the soil.</h2>
+      <p>Tap a herb to discover what it does for your scalp and strands. Hover the circle to pause it.</p>
+    </div>
+    <div class="orbit-wrap">
+      <div class="orbit reveal" id="orbit">
+        <div class="orbit-track"></div>
+        <div class="orbit-center" id="orbitCenter"></div>
+      </div>
+      <div class="herb-panel reveal" id="herbPanel"><div class="swap" id="herbSwap"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The Collection</div>
+      <h2>An oil for every <em>hair story.</em></h2>
+      <p>Filter by what your hair needs most. Pick a size and add it to your ritual.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="chip active" data-f="all">All oils</button>
+      <button class="chip" data-f="hairfall">Hair fall</button>
+      <button class="chip" data-f="dandruff">Dandruff</button>
+      <button class="chip" data-f="growth">Growth</button>
+      <button class="chip" data-f="shine">Dry & frizzy</button>
+    </div>
+    <div class="grid-products" id="products"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><strong data-count="21">0</strong><span>Herbs in every bottle</span></div>
+    <div class="stat reveal"><strong data-count="94" data-suffix="%">0</strong><span>Felt less hair fall in 8 weeks*</span></div>
+    <div class="stat reveal"><strong data-count="120" data-suffix="k+">0</strong><span>Happy heads</span></div>
+    <div class="stat reveal"><strong data-count="7">0</strong><span>Days of slow brewing</span></div>
+  </div>
+</div>
+
+<!-- RITUAL -->
+<section class="ritual" id="ritual">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The Ritual</div>
+      <h2>Four steps. <em>Thirty minutes.</em> A lifetime of roots.</h2>
+      <p>Champi isn't a chore; it's the original self-care. Here's how to get the most out of every drop.</p>
+    </div>
+    <div class="steps" id="steps">
+      <div class="steps-line"><span id="stepsLine"></span></div>
+      <div class="step"><div class="step-txt l"><h3>Warm</h3><p>Place the bottle in warm water for 2 minutes. Gentle heat opens up the herbs' aroma and helps the oil sink in.</p><small>2 minutes</small></div><div class="step-num">01</div><div class="step-art r" data-icon="flame" data-label="Step 01 · Warm"></div></div>
+      <div class="step"><div class="step-art l" data-icon="drop" data-label="Step 02 · Apply"></div><div class="step-num">02</div><div class="step-txt r"><h3>Part & Apply</h3><p>Section your hair and use the dropper to place oil directly along your parting, right on the scalp.</p><small>8–10 drops per section</small></div></div>
+      <div class="step"><div class="step-txt l"><h3>Massage</h3><p>Use your fingertips in slow circles from the hairline to the crown. It boosts blood flow to the roots.</p><small>5–10 minutes</small></div><div class="step-num">03</div><div class="step-art r" data-icon="massage" data-label="Step 03 · Massage"></div></div>
+      <div class="step"><div class="step-art l" data-icon="moon" data-label="Step 04 · Rest"></div><div class="step-num">04</div><div class="step-txt r"><h3>Rest & Rinse</h3><p>Leave it on for at least an hour, or overnight for a deep treatment. Wash off with a mild, sulphate-free shampoo.</p><small>1 hour – overnight</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz" id="quiz">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Find Your Oil</div>
+      <h2>Not sure where to start? <em>Ask your hair.</em></h2>
+      <p>Three quick questions and we'll match you with your perfect oil.</p>
+    </div>
+    <div class="quiz-box reveal">
+      <div class="quiz-progress"><span id="qProg"></span></div>
+      <div id="quizBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews">
+  <div class="container">
+    <div class="sec-head reveal"><div class="eyebrow">Loved by 120k+</div><h2>Words from the <em>roots.</em></h2></div>
+    <div class="testi-wrap reveal">
+      <div class="quote-mark">“</div>
+      <div id="testis"></div>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container faq-grid">
+    <div class="reveal">
+      <div class="eyebrow">Questions</div>
+      <h2>Good to <em>know.</em></h2>
+      <p>Can't find what you're looking for? Write to us at hello@keshya.in and our Ayurveda experts will help.</p>
+    </div>
+    <div class="reveal" id="faqList"></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER + FOOTER -->
+<section class="news">
+  <div class="container">
+    <div class="news-box reveal">
+      <div><div class="eyebrow" style="color:var(--cream)">Join the circle</div><h2>Get 15% off your first ritual.</h2></div>
+      <div class="news-wrap" id="newsWrap">
+        <form class="news-form" id="newsForm" novalidate>
+          <input type="email" id="newsEmail" placeholder="Your email address" autocomplete="email" aria-label="Email address">
+          <button type="submit" id="newsBtn">Subscribe</button>
+        </form>
+        <div class="news-msg" id="newsMsg" role="status"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><svg viewBox="0 0 22 28"><path d="M11 1S2 12 2 18a9 9 0 0 0 18 0C20 12 11 1 11 1z" fill="#C8923A"/></svg>KESHYA</div>
+        <p style="font-size:.9rem;max-width:20rem">Ayurvedic hair oils, slow-brewed in small batches in Kerala. Cruelty-free, always.</p>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="#shop">All Oils</a></li><li><a href="#shop">Bestsellers</a></li><li><a href="#shop">Gift Sets</a></li><li><a href="#quiz">Hair Quiz</a></li></ul></div>
+      <div><h4>About</h4><ul><li><a href="#ingredients">Our Herbs</a></li><li><a href="#ritual">The Ritual</a></li><li><a href="#">Sustainability</a></li><li><a href="#">Journal</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="big-word">KESHYA</div>
+    <div class="foot-bottom"><span>© 2026 Keshya Botanicals. Concept design.</span><span>*Illustrative figures for design purposes</span></div>
+  </div>
+</footer>
+
+<!-- Cart drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Cart">
+  <div class="drawer-head"><h3>Your Ritual</h3><button class="icon-btn" id="closeCart" aria-label="Close" data-icon="x"></button></div>
+  <div class="ship" id="ship"></div>
+  <div class="items" id="items"></div>
+  <div class="drawer-foot">
+    <div class="sub"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+    <button class="btn btn-primary" id="checkout">Checkout <span class="arrow">→</span></button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<!-- Search -->
+<div class="search" id="search" aria-hidden="true">
+  <div class="search-bg" id="searchBg"></div>
+  <div class="search-panel" role="dialog" aria-label="Search">
+    <div class="search-inner">
+      <div class="search-bar">
+        <span data-icon="search"></span>
+        <input id="sInput" type="text" placeholder="Search oils, herbs, hair concerns…" autocomplete="off" aria-label="Search">
+        <kbd>Esc</kbd>
+        <button class="s-close" id="sClose" aria-label="Close search" data-icon="x"></button>
+      </div>
+      <div class="s-suggest" id="sSuggest">Popular:
+        <button>Hair fall</button><button>Dandruff</button><button>Rosemary</button><button>Frizzy hair</button><button>Overnight</button>
+      </div>
+      <div id="sResults"></div>
+      <div class="s-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> to navigate</span><span><kbd>Enter</kbd> to open</span><span><kbd>Ctrl</kbd> + <kbd>K</kbd> to search anytime</span></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
